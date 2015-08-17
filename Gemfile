@@ -30,6 +30,8 @@ gem 'devise', '3.5.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'devise-bootstrap-views'
+
 group :development, :test do
 
   # Use sqlite3 as the database for Active Record

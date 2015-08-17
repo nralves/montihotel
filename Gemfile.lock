@@ -63,6 +63,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.5)
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10-x64-mingw32)
@@ -216,6 +217,7 @@ DEPENDENCIES
   coffee-rails (= 4.1.0)
   coffee-script-source (= 1.8.0)
   devise (= 3.5.1)
+  devise-bootstrap-views
   foreman
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)
