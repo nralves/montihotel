@@ -1,2 +1,76 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+/* universal */
+
+body {
+  padding-top: 80px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+
+}
+
+/* header */
+
+header ul {
+	padding:10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+							
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+							
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #1FCDFF;
+}
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $gray-light;
+
+  a {
+  	color: $gray;
+
+  	&:hover{
+  		color: $gray-darker;
+  	}
+  }
+
+
+  small {
+	float: left;
+  }
+
+  ul {
+	float: right;
+	list-style: none;
+
+	li {
+		float: left;
+		margin-left: 15px;
+	}
+  }
+
+}
+							
