@@ -1,0 +1,2 @@
+module ManagePagesHelper
+end
