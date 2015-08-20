@@ -1,0 +1,23 @@
+ <div id="map-container">
+      <div id="map-canvas"></div>
+ </div>
+                
+<script type="text/javascript">
+
+  var map;
+  function initMap() {
+    var myLatLng = {lat: 38.704458, lng: -8.964656};
+
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: myLatLng, zoom: 12
+    });
+
+    var Marker = createCustomMarker(myLatLng, map, 'MontiHotel');
+                 
+  }
+
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC9Q4J85zsTpbTHyBCSwxNWBqrItW3t34&callback=initMap">
+</script>

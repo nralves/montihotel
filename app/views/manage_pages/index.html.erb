@@ -1,14 +1,5 @@
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-<% end %>
+<%= render 'layouts/loginBar' %>
 
-<!-- Page Heading -->
         <div class="row">
           <h1 class="page-header">MontiHotel
                     <small>Empresa</small>
@@ -26,39 +17,13 @@
                   <li>Serviço 3</li>
                 </ul>
 
-                <p>A empresa presta todos estes serviços a nível nacional...A MontiHotel é uma empresa.... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis placerat vulputate. Sed ante massa, ullamcorper rutrum nulla nec, dignissim ornare purus. In aliquam magna quis odio pretium, sit amet pellentesque leo condimentum.</p>
+                <p>A empresa presta todos estes serviços a nível nacional... A MontiHotel é uma empresa.... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis placerat vulputate. Sed ante massa, ullamcorper rutrum nulla nec, dignissim ornare purus. In aliquam magna quis odio pretium, sit amet pellentesque leo condimentum.</p>
 
                 <h1><small>Localização:</small></h1>
-                <div id="map-container">
-                  <div id="map-canvas">
-                  </div>
-                </div>
-                <script type="text/javascript">
-
-                var map;
-                function initMap() {
-                  var myLatLng = {lat: 38.704458, lng: -8.964656};
-
-                  map = new google.maps.Map(document.getElementById('map-canvas'), {
-                    center: myLatLng,
-                    zoom: 12
-                  });
-
-                  
-
-                   var Marker = createCustomMarker(myLatLng, map, 'MontiHotel');
-
-                  
-                }
-
-                </script>
-                    <script async defer
-                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC9Q4J85zsTpbTHyBCSwxNWBqrItW3t34&callback=initMap">
-                    </script>
+               <%= render 'layouts/googleMap' %>
 
 
                 <h1><small>Os nossos projectos:</small></h1>
                 <p>Veja alguns dos nossos projectos. Executamos os mais variados trabalhos em dezenas de locais por todo o país, veja alguns deles (fotos de exemplo):
             </div>
         </div>
-		<!-- /.row -->
